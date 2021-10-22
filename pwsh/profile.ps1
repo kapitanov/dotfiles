@@ -70,3 +70,5 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 Import-Module -Name PSKubectlCompletion
 Register-KubectlCompletion
+
+filter xargs { ($h,$t) = $args; & $h ($t + $_) }
